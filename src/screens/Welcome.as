@@ -39,6 +39,8 @@ package screens
 			
 			hero = new Image(Assets.getTexture("WelcomeHero"));
 			this.addChild(hero);
+			hero.x = -hero.width;
+			hero.y = 100;
 			
 			playBtn = new Button(Assets.getTexture("WelcomePlayBtn"));
 			playBtn.x = 500;
@@ -54,6 +56,9 @@ package screens
 		public function initialize():void
 		{
 			this.visible = true;
+			
+			hero.x = -hero.width;
+			hero.y = 100;
 		}
 	}
 }
