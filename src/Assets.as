@@ -1,5 +1,6 @@
 package
 {
+	import flash.display.Bitmap;
 	import flash.utils.Dictionary;
 	
 	import starling.textures.Texture;
@@ -15,7 +16,7 @@ package
 		[Embed(source="../media/graphics/welcome_title.png")]
 		public static const WelcomeTitle:Class;
 		
-		[Embed(source="../media/graphics/playButton.png")]
+		[Embed(source="../media/graphics/welcome_playButton.png")]
 		public static const WelcomePlayBtn:Class;
 		
 		[Embed(source="../media/graphics/welcome_aboutButton.png")]
@@ -25,7 +26,7 @@ package
 		
 		public static function getTexture(name:String):Texture
 		{
-			if (gameTextures[name] == undefined
+			if (gameTextures[name] == undefined)
 				{
 					var bitmap:Bitmap = new Assets[name]();
 					gameTextures[name] = Texture.fromBitmap(bitmap);

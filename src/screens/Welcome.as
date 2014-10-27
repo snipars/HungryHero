@@ -41,9 +41,19 @@ package screens
 			this.addChild(hero);
 			
 			playBtn = new Button(Assets.getTexture("WelcomePlayBtn"));
+			playBtn.x = 500;
+			playBtn.y = 260;
 			this.addChild(playBtn);
 			
 			aboutBtn = new Button(Assets.getTexture("WelcomeAboutBtn"));
+			aboutBtn.x = 410;
+			aboutBtn.y = 380;
+			this.addChild(aboutBtn);
+		}
+		
+		public function initialize():void
+		{
+			this.visible = true;
 		}
 	}
 }
